@@ -1,0 +1,6 @@
+<div>
+	<h1>Update This Story!</h1>
+	<%= render 'stories/form' %>
+	<%= link_to 'Delete This Story', story_path(@story), method: :delete,  data: {confirm: 'Are You Sure Want to Delete ' + @story.story_title} %>
+	<%= link_to 'Main Page', root_path %>
+</div>

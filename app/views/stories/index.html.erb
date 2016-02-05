@@ -1,0 +1,9 @@
+<div>
+	<h1>This is our stories</h1>
+	<% @stories.each do |story| %>
+		<h2><%= link_to story.story_title, story_path(story) %></h2>
+		<p><%= truncate story.story_body, length: 150 %></p>
+		<h5>Created since <%= time_ago_in_words(story.created_at) %></h5>
+	<% end %>
+	<%= link_to 'New Story', new_story_path %>
+</div>
